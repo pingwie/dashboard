@@ -1,5 +1,5 @@
 pandas
 statsmodels
 altair
-openpyxl
 vl-convert-python
+openpyxl
