@@ -1200,6 +1200,8 @@ fig9 = (bar + line2 + line + line_cir + texto_punt + texto_tend).resolve_scale(y
 # In[ ]:
 
 st.set_page_config(layout="wide")
+[theme]
+base = "light"
 st.markdown("<div style = 'background:#cccccc; padding-left: 20px;'><h3>  Educación Dashboard </h3></div>", unsafe_allow_html=True)
 
 st.write("")
