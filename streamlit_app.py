@@ -548,7 +548,7 @@ nearest = alt.selection_point(nearest=True, on="pointerover",
 fig1 = alt.Chart(
     todas_materias.query("Country in @paises")
 ).mark_line().encode(
-    alt.X('Country', axis = alt.Axis(title = 'Pais', labelFontSize=12, titleFontSize=14)),
+    alt.X('Country', axis = alt.Axis(title = 'País', labelFontSize=12, titleFontSize=14)),
     alt.Y('score', scale = alt.Scale(domain =[000, 580]), 
           axis=alt.Axis(title = 'Puntuación', labelFontSize=12, titleFontSize=14)),
     color = alt.Color('materia', legend= alt.Legend(titleFontSize=12, labelFontSize=11))
@@ -586,7 +586,7 @@ nearest = alt.selection_point(nearest=True, on="pointerover",
 fig1a = alt.Chart(
     media_matematicas
 ).mark_line().encode(
-    alt.X('Country', axis = alt.Axis(title = 'Pais', labelFontSize=12, titleFontSize=14)),
+    alt.X('Country', axis = alt.Axis(title = 'País', labelFontSize=12, titleFontSize=14)),
     alt.Y('score', scale = alt.Scale(domain =[000, 600]), 
           axis=alt.Axis(title = 'Puntuación', labelFontSize=12, titleFontSize=14)),
     # color = alt.Color('materia', legend= alt.Legend(titleFontSize=12, labelFontSize=11))
@@ -619,7 +619,7 @@ fig1a = alt.layer(fig1a, points, rules).properties(width=900).configure_title(
 # Comparativa de las puntuaciones en PISA / Países europeos
 
 fig2 = alt.Chart(todas_materias.query("Country in @europa & materia =='matemáticas'")).mark_bar().encode(
-    alt.X('Country', axis = alt.Axis(title = 'Pais', labelFontSize=12, titleFontSize=14)),
+    alt.X('Country', axis = alt.Axis(title = 'País', labelFontSize=12, titleFontSize=14)),
     alt.Y('score', scale = alt.Scale(domain =[0, 600]), 
           axis = alt.Axis(title = 'Puntuación', labelFontSize=12, titleFontSize=14)),
     color = alt.condition(
@@ -1131,7 +1131,7 @@ base = alt.Chart(
     # pd.merge(sueldo, media_matematicas, on = 'Country', how='inner')
     df
 ).encode(
-    x =alt.X('Country:N', sort=orden, axis=alt.Axis(title='Paises', titleFontSize=14, labelFontSize=12)), 
+    x =alt.X('Country:N', sort=orden, axis=alt.Axis(title='Países', titleFontSize=14, labelFontSize=12)), 
 )
 bar = base.mark_bar().encode(
     # y = alt.Y('Value', title='Sueldo medio'),
