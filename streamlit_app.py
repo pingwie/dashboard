@@ -572,7 +572,7 @@ rules = alt.Chart(todas_materias.query("Country in @paises")).transform_pivot(
 fig1 = alt.layer(fig1, points, rules).configure_title(
     fontSize=20
 )
-fig1.display()
+# fig1.display()
 # fig1.save('images/fig1.png', ppi=300)
 
 
@@ -606,7 +606,7 @@ rules = alt.Chart(media_matematicas).mark_rule(color="gray").encode(
 fig1a = alt.layer(fig1a, points, rules).properties(width=900).configure_title(
     fontSize=20
 )
-fig1a.display()
+# fig1a.display()
 # fig1a.save('images/fig1a.png', ppi=300)
 
 
@@ -632,7 +632,7 @@ fig2 = alt.Chart(todas_materias.query("Country in @europa & materia =='matemáti
     fontSize=20
 )
 
-fig2.display()
+# fig2.display()
 # fig2.save('images/fig2.png', ppi=300)
 
 
@@ -656,7 +656,7 @@ fig3 = alt.Chart(diferencias_matematicas_genero[['Country','Diff']].query("Count
     fontSize=20
 )
 
-fig3.display()
+# fig3.display()
 #fig3.save('images/fig3.png', ppi=300)
 
 
@@ -693,7 +693,7 @@ fig4 = fig4a | fig4b
 fig4.properties(title='Diferencias en matemáticas por Género').configure_title(
     anchor='middle', fontSize=20, offset=10
 )
-fig4.display()
+# fig4.display()
 # fig4.save('images/fig4.png', ppi=300)
 
 
@@ -832,7 +832,7 @@ fig5a = (grafica_izq | grafica_der).properties(
     anchor='middle', fontSize=20, offset=10
 )
 
-fig5a.display()
+# fig5a.display()
 
 
 # fig5a.save('images/fig5c.png', ppi=300)
@@ -895,7 +895,7 @@ fig6 = (chart2 + chart1).properties(
     title=alt.TitleParams('Ratio vs puntuación en matemáticas', fontSize=20)
     # title='Ratio vs puntuación en matemáticas'
 )
-fig6.display()
+# fig6.display()
 # fig6.save('images/fig6.png', ppi=300)
 
 
@@ -977,11 +977,11 @@ fig7 = fig7.add_params(
     zonas_select
 ).transform_filter(zonas_select)
 # fig7
-fig7.properties(
+fig7 = fig7.properties(
     # title='Puntuación matemáticas (rango socioeconómico)', 
     title=alt.TitleParams('Puntuación matemáticas (rango socioeconómico)', fontSize=20),
     height= HEIGHT, width = WIDTH,
-               ).display()
+               )#.display()
 # fig7.properties(title='Puntuación matemáticas (rango socioeconómico)', height= HEIGHT, width = WIDTH
 #                ).save('images/fig7a.png', ppi=300)
 
@@ -1062,7 +1062,7 @@ fig8 = alt.layer(G1, G2, rule).resolve_scale(y='independent').properties(
 )
 fig8 = fig8.add_params(zonas_select).transform_filter(zonas_select)
 
-fig8.display()
+# fig8.display()
 # fig8.save('images/fig8a_europa.png', ppi=300)
 
 
@@ -1105,7 +1105,7 @@ fig8c = fig8c.properties(
     height=HEIGHT, width=WIDTH
 )
 # fig8c.add_params(zonas_select).transform_filter(zonas_select)
-fig8c.display()
+# fig8c.display()
 # fig8c.save('images/fig8c.png', ppi=300)
 
 
@@ -1193,7 +1193,7 @@ fig9 = (bar + line2 + line + line_cir + texto_punt + texto_tend).resolve_scale(y
     title='Sueldo vs puntuación en matemáticas').configure_title( 
     fontSize=20,
 )
-fig9.display()
+# fig9.display()
 # fig9.save('images/fig9.png', ppi=300)
 
 
