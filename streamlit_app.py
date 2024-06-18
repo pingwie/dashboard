@@ -1205,7 +1205,7 @@ st.markdown("<div style = 'background:#cccccc; padding-left: 20px;'><h3>Educaci√
 st.write("")
 panel1 = st.container()
 with panel1:
-    columns = st.columns([2,0.1, 2,0.5])
+    columns = st.columns([2,0.1, 2,1])
     with columns[0]:
         st.altair_chart(fig1, use_container_width=True)
         st.altair_chart(fig3, use_container_width=True)
