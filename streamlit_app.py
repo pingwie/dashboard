@@ -728,7 +728,7 @@ G1 = alt.Chart(estudios_H_M.query("Country in @paises_aa")).mark_bar().encode(
     # color= alt.Color('ISC11A:O', title='Nivel Educativo')
     color= alt.Color(
         'ISC11A:O', title='Nivel Educativo', 
-        legend= alt.Legend(titleFontSize=12, labelFontSize=11,
+        legend= alt.Legend(titleFontSize=12, labelFontSize=11, orient='bottom',
         labelExpr="datum.label === 'L0T2' ? 'Inferior a Ed. Secund.': datum.label === 'L3T4' ? 'Ed. Secund.' : 'Ed. Terciaria'"
                     )
     ),
@@ -1200,7 +1200,7 @@ fig9 = (bar + line2 + line + line_cir + texto_punt + texto_tend).resolve_scale(y
 # In[ ]:
 
 st.set_page_config(layout="wide")
-st.markdown("<div style = 'background:#cccccc; padding-left: 20px;'><h3>  Educación Dashboard </h3></div>", unsafe_allow_html=True)
+st.markdown("<div style = 'background:#cccccc; padding-left: 20px;'><h3>Educación y factores socioeconómicos </h3></div>", unsafe_allow_html=True)
 
 st.write("")
 panel1 = st.container()
